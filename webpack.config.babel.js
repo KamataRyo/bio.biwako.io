@@ -1,8 +1,8 @@
 // webpack.config.js
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 // import webpack from 'webpack'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default {
   entry: './src/main.jsx',
@@ -15,7 +15,7 @@ export default {
     rules: [
       {
         test: /.jsx?$/,
-        use: [{ loader: 'babel-loader' }]
+        use: [{ loader: 'babel-loader?compact=false' }]
       }
     ]
   },
@@ -23,7 +23,7 @@ export default {
     new HtmlWebpackPlugin({
       template : './src/index.html',
       hash     : false,
-      favicon  : './src/favicon.ico',
+      favicon  : './public/favicon.ico',
       filename : 'index.html',
       inject   : 'body',
       minify   : { collapseWhitespace : true }

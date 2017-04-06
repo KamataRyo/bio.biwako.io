@@ -1,13 +1,16 @@
 // @flow
-
 import React      from 'react'
 import { render } from 'react-dom'
-import Hello      from './Hello.jsx'
+import App        from './Components/App.jsx'
+
+const meta: Meta = {
+  title: '琵琶湖のいきもの'
+}
 
 render(
   <div>
     {/* <Hello /> */}
-    <Hello name={ 'aaa' } />
+    <App meta={ meta } />
   </div>,
   document.getElementById('app')
 )
