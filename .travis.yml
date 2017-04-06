@@ -1,3 +1,14 @@
+become: no
 language: node_js
 node_js:
 - '7'
+
+after_success:
+- 'npm run build'
+
+env:
+  global:
+  - GIT_USER: Travis CI
+  - GIT_EMAIL: kamataryo@users.noreply.github.com
+  - GH_REF: github.com/kamataryo/bio.biwako.io.git
+  - secure: 1J+xS6rsVqf9xwwxOt+iwEl/19K98uvUGYChiMma2QIPCzbPozWfJHOAgCXKKHk4wivPCyOH0n0XRFOzw9KSJtiPSG1rrU+bacRIqwCha2rwp6w93XW8G+AbFMh4h4f7zus+dx8Pmbv1jZyxUCHLucZZZVDiGbWPWyRO+kgn5Ph2Y2FQHMydVGF+RWVrKNr8Na05N75oh7FJdlT5p8UO8hOiSzP4ngQgN5I/9BF/NcxGlIFUdu8tZclBQSgz+QiLE26OVWEj4yj3Nm0EAo4AsR6nyMB8AX5gxTsmFd+ZWNuKvv5p0D7fZ/NF/CUAkVx+Hce72dLxJWwc+ro79N/5XQHrqMT9FMqRl5y4ABVNmZwJIvY8BAb+rpRP0GxG/ruXvTSo2NVYU0xys1MWosoqwgRd5S8yIyq72BFKPM0H+Vp2jNRYu5kPYcD5JRhZksWs2idXc3m9c3/FQD7uhml8ywsOOaGCwOEJFkN9P0uK8J+kZ1sHmPfffj+eup+X4UzBBfmnZ567953e5IxNNdmIW6ndcD/VoyeL9dxx0BQvEBnycqfX417YceZS3xUiVEryVIVtUmZ09l25ad1TIbwm1Io6cWxLHwQNDY4rctJePmalWRyDumQTwtibMd92DuXzvrrTVrhg8EcVr9kCOyV4CtBQmBI/E6xe/8f7iaa/irk=
