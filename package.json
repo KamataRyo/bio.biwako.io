@@ -4,7 +4,7 @@
   "description": "琵琶湖の生き物ウェブサイト",
   "main": "dist/index.html",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack -p && cp ./CNAME ./dist/",
     "start": "webpack-dev-server --progress --colors --hot --inline",
     "lint": "eslint .",
     "test": "flow && npm run lint"
