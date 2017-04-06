@@ -8,12 +8,8 @@
   "plugins": [
     "import",
     "jsx-a11y",
-    "react"
-  ],
-  "extends": [
-    "plugin:import/errors",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended"
+    "react",
+    "flowtype"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -124,6 +120,8 @@
       "beforeSelfClosing": "always",
       "afterOpening": "never"
     }],
+    "react/jsx-uses-react": ["error"],
+    "react/jsx-uses-vars": ["error"],
     "jsx-a11y/anchor-has-content": ["error"],
     "jsx-a11y/aria-props": ["error"],
     "jsx-a11y/aria-proptypes": ["error"],
@@ -146,11 +144,28 @@
     "jsx-a11y/role-has-required-aria-props": ["error"],
     "jsx-a11y/role-supports-aria-props": ["error"],
     "jsx-a11y/scope": ["error"],
-    "jsx-a11y/tabindex-no-positive": ["error"]
+    "jsx-a11y/tabindex-no-positive": ["error"],
+    "flowtype/boolean-style": ["error",  "boolean"],
+    "flowtype/define-flow-type": 1,
+    "flowtype/delimiter-dangle": ["error", "never"],
+    "flowtype/generic-spacing": ["error", "never"],
+    "flowtype/no-primitive-constructor-types": ["error"],
+    "flowtype/no-weak-types": ["warn"],
+    "flowtype/object-type-delimiter": ["error", "comma"],
+    "flowtype/require-parameter-type": ["error"],
+    "flowtype/require-return-type": ["error", "always",{ "annotateUndefined": "never" }],
+    "flowtype/require-valid-file-annotation": ["error"],
+    "flowtype/semi": ["error", "always"],
+    "flowtype/space-after-type-colon": ["error", "always"],
+    "flowtype/space-before-generic-bracket": ["error", "never"],
+    "flowtype/space-before-type-colon": ["error", "never"],
+    "flowtype/type-id-match": ["error", "^([A-Z][a-z0-9]+)+Type$"],
+    "flowtype/union-intersection-spacing": ["error",  "always"],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1
   },
   "settings": {
-    "import/resolver": {
-      "node": {
+    "import/resolver": {"node": {
         "paths": [
         "src",
         "test"
@@ -160,6 +175,9 @@
           ".jsx"
         ]
       }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
   }
 }

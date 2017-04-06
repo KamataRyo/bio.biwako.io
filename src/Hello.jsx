@@ -1,10 +1,13 @@
+// @flow
+
 import React from 'react'
 
 /**
- * @return {Comopnent} say hello
+ * [props description]
+ * @param  {{name:string}} props is given props
+ * @return {ReactElement} say hello
  */
-const Hello = () => {
-  return <h1>{ 'Hello' }</h1>
+export default (props: { name: string }): React$Element<> => {
+  const { name } = props
+  return <p>{ `Hello, ${name}` }</p>
 }
-
-export default Hello

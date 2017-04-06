@@ -1,9 +1,13 @@
-import React from 'react'
-import { render } from 'react-dom'
+// @flow
 
-import Hello from './Hello.jsx'
+import React      from 'react'
+import { render } from 'react-dom'
+import Hello      from './Hello.jsx'
 
 render(
-  <Hello />,
+  <div>
+    {/* <Hello /> */}
+    <Hello name={ 'aaa' } />
+  </div>,
   document.getElementById('app')
 )
