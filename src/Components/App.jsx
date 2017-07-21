@@ -5,10 +5,10 @@ import Footer from './Footer.jsx'
 
 /**
  * Application container Component
- * @param  {{meta:meta}} props is given props
+ * @param  {{meta: meta, data: data}} props is given props
  * @return {ReactElement} say hello
  */
-export default (props: { meta: Meta }): React$Element<> => {
+export default (props: { meta: Meta, data: Data }): React$Element<> => {
 
   // parse const
   const { title } = props.meta
